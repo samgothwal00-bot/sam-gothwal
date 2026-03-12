@@ -1,0 +1,164 @@
+/* 
+   PASTE THIS INTO: 
+   Elementor > Site Settings > Custom CSS 
+   OR 
+   Appearance > Customize > Additional CSS
+*/
+
+:root {
+    --sam-bg: #0a0a0c;
+    --sam-primary: #2ecc71;
+    --sam-text: #ffffff;
+    --sam-sidebar-width: 280px;
+}
+
+body.elementor-page-sam {
+    background-color: var(--sam-bg) !important;
+    color: var(--sam-text) !important;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Sidebar Styling */
+.sam-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: var(--sam-sidebar-width);
+    background: var(--sam-bg);
+    border-right: 1px solid rgba(255,255,255,0.1);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.sam-sidebar .logo {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sam-sidebar .logo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid rgba(46, 204, 113, 0.2);
+    object-fit: cover;
+}
+
+.sam-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sam-sidebar nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.sam-sidebar nav ul li a:hover, 
+.sam-sidebar nav ul li a.active {
+    background: var(--sam-primary);
+    box-shadow: 0 10px 20px rgba(46, 204, 113, 0.2);
+}
+
+/* Hero Section Styling */
+.sam-hero {
+    margin-left: var(--sam-sidebar-width);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    gap: 50px;
+}
+
+.sam-hero-content h3 {
+    color: var(--sam-primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.sam-hero-content h1 {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.sam-hero-content h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.sam-hero-content h2 span {
+    color: var(--sam-primary);
+    font-weight: 600;
+}
+
+.sam-hero-content .btn-cv {
+    display: inline-block;
+    padding: 18px 40px;
+    background: var(--sam-primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 15px 30px rgba(46, 204, 113, 0.3);
+    transition: 0.3s;
+}
+
+.sam-hero-content .btn-cv:hover {
+    transform: translateY(-5px);
+}
+
+.sam-hero-image {
+    position: relative;
+}
+
+.sam-hero-image .circle-bg {
+    position: absolute;
+    inset: -20px;
+    background: var(--sam-primary);
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+    animation: pulse 3s infinite;
+}
+
+.sam-hero-image img {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 10px solid rgba(255,255,255,0.05);
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.1; }
+    50% { transform: scale(1.1); opacity: 0.2; }
+    100% { transform: scale(1); opacity: 0.1; }
+}
+
+@media (max-width: 1024px) {
+    .sam-sidebar { display: none; }
+    .sam-hero { margin-left: 0; flex-direction: column; text-align: center; padding: 100px 20px; }
+    .sam-hero-content h1 { font-size: 50px; }
+    .sam-hero-image img { width: 300px; height: 300px; }
+}

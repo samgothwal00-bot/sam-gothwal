@@ -1,0 +1,7 @@
+{
+  "name": "Sam's Portfolio",
+  "description": "A modern, dark-themed freelancer portfolio website with smooth scrolling and animations.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

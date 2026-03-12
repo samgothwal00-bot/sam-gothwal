@@ -1,0 +1,28 @@
+/*
+Theme Name: Sam Portfolio
+Theme URI: https://example.com/sam-portfolio
+Author: Sam
+Author URI: https://example.com
+Description: A modern dark-themed portfolio theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sam-portfolio
+*/
+
+/* Global Styles */
+body {
+    background-color: #0a0a0c;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.text-primary {
+    color: #2ecc71;
+}
+
+.bg-primary {
+    background-color: #2ecc71;
+}
